@@ -138,6 +138,33 @@
     .copy-btn:active {
       transform: scale(0.97);
     }
+    .where-actions {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: stretch;
+    }
+    .naver-map-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background: #03c75a;
+      color: #ffffff;
+      border-radius: 14px;
+      padding: 10px 14px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+      font-family: inherit;
+    }
+    .naver-map-btn:active {
+      transform: scale(0.97);
+    }
     .closing-box {
       margin-top: 28px;
       padding: 20px;
@@ -218,7 +245,14 @@
               <div class="value-strong">인천광역시 서구 검마루로 124</div>
               <div class="value-sub">5403동 2205호</div>
             </div>
-            <button class="copy-btn" type="button" onclick="handleCopy()">복사</button>
+            <div class="where-actions">
+              <button class="copy-btn" type="button" onclick="handleCopy()">복사</button>
+              <a
+                class="naver-map-btn"
+                href="https://naver.me/x52cFSdt"
+                rel="noopener noreferrer"
+              >네이버지도</a>
+            </div>
           </div>
           <div class="helper">
             헤매실까 봐 주소는 정확히 적어두었습니다. 길만 잘 찾으시면 나머지는 제가 책임지겠습니다.
