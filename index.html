@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>초대합니다.</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #111827;
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR",
+        "Malgun Gothic", "Segoe UI", sans-serif;
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      background: #ffffff;
+    }
+    .page {
+      width: 100%;
+      max-width: 420px;
+      min-height: 100vh;
+      padding: 24px 20px;
+      background: #ffffff;
+    }
+    .card {
+      border: 1px solid #e5e7eb;
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 24px;
+      box-shadow: 0 12px 40px rgba(15, 23, 42, 0.08);
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      border: 1px solid #d1d5db;
+      background: #f9fafb;
+      padding: 6px 12px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      color: #4b5563;
+    }
+    h1 {
+      margin: 20px 0 0;
+      font-size: 40px;
+      line-height: 1.15;
+      color: #111827;
+    }
+    p {
+      margin: 0;
+      word-break: keep-all;
+    }
+    .lead {
+      margin-top: 16px;
+      font-size: 17px;
+      line-height: 1.9;
+      color: #1f2937;
+    }
+    .highlight-box, .info-box, .closing-box {
+      border-radius: 20px;
+      padding: 16px;
+    }
+    .highlight-box {
+      margin-top: 20px;
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+    }
+    .highlight-box p {
+      font-size: 15px;
+      line-height: 1.9;
+      color: #1f2937;
+    }
+    .highlight {
+      font-weight: 700;
+      color: #b45309;
+    }
+    .section-list {
+      margin-top: 28px;
+      display: grid;
+      gap: 16px;
+    }
+    .info-box, .closing-box {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+    }
+    .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-weight: 700;
+      color: #6b7280;
+    }
+    .value-strong {
+      margin-top: 8px;
+      font-size: 22px;
+      font-weight: 700;
+      color: #111827;
+      line-height: 1.5;
+    }
+    .value-sub {
+      margin-top: 4px;
+      color: #374151;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+    .helper {
+      margin-top: 8px;
+      font-size: 14px;
+      line-height: 1.8;
+      color: #4b5563;
+    }
+    .where-row {
+      margin-top: 8px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .copy-btn {
+      flex-shrink: 0;
+      border: 1px solid #d1d5db;
+      background: #111827;
+      color: #ffffff;
+      border-radius: 14px;
+      padding: 10px 14px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+    }
+    .copy-btn:active {
+      transform: scale(0.97);
+    }
+    .closing-box {
+      margin-top: 28px;
+      padding: 20px;
+    }
+    .closing-box p {
+      font-size: 15px;
+      line-height: 1.9;
+      color: #1f2937;
+    }
+    .footer {
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: 1px solid #e5e7eb;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 500;
+      color: #6b7280;
+    }
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 24px;
+      transform: translateX(-50%) translateY(20px);
+      background: rgba(17, 24, 39, 0.96);
+      color: #ffffff;
+      border-radius: 999px;
+      padding: 12px 16px;
+      font-size: 14px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      z-index: 999;
+      white-space: nowrap;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <div class="badge">HOUSEWARMING INVITE</div>
+
+      <h1>초대합니다.</h1>
+
+      <p class="lead">
+        드디어 집을 장만했습니다. 그래서 정중하게, 하지만 약간 뻔뻔하게
+        집들이에 초대합니다.
+      </p>
+
+      <div class="highlight-box">
+        <p>
+          집안에 뭐라도 사주고 싶은 그 따뜻한 마음, 정말 눈물 나게 감사합니다.
+          하지만 이미 과소비의 아름다운 흔적으로 집 안이 제법 꽉 차 있습니다.
+          그러니 선물은 넣어두시고,
+          <span class="highlight">몸만 오셔서 축하와 입담만 놓고 가주세요.</span>
+          그게 제일 실용적입니다.
+        </p>
+      </div>
+
+      <div class="section-list">
+        <div class="info-box">
+          <div class="label">When</div>
+          <div class="value-strong">2026년 4월 18일 토요일</div>
+          <div class="value-sub">오후 12시쯤</div>
+          <div class="helper">
+            너무 칼같이 오셔도 좋고, 한국인의 미덕을 살짝 담아 오셔도 괜찮습니다.
+          </div>
+        </div>
+
+        <div class="info-box">
+          <div class="label">Where</div>
+          <div class="where-row">
+            <div>
+              <div class="value-strong">인천광역시 서구 검마루로 124</div>
+              <div class="value-sub">5403동 2205호</div>
+            </div>
+            <button class="copy-btn" type="button" onclick="handleCopy()">복사</button>
+          </div>
+          <div class="helper">
+            헤매실까 봐 주소는 정확히 적어두었습니다. 길만 잘 찾으시면 나머지는 제가 책임지겠습니다.
+          </div>
+        </div>
+      </div>
+
+      <div class="closing-box">
+        <p>
+          새 집 구경도 하시고, 잘 살라고 한마디씩 던져주시고,
+          냉정한 인테리어 평가도 적당히만 부탁드립니다.
+          웃고 떠들다 가시면 그걸로 집들이는 대성공입니다.
+        </p>
+      </div>
+
+      <div class="footer">축하만 들고 오기, 대환영</div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast">주소가 복사되었어요.</div>
+
+  <script>
+    const address = "인천광역시 서구 검마루로 124";
+
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("show");
+      clearTimeout(window.__toastTimer);
+      window.__toastTimer = setTimeout(() => {
+        toast.classList.remove("show");
+      }, 1800);
+    }
+
+    function fallbackCopyText(text) {
+      const textArea = document.createElement("textarea");
+      textArea.value = text;
+      textArea.setAttribute("readonly", "");
+      textArea.style.position = "fixed";
+      textArea.style.top = "-9999px";
+      textArea.style.left = "-9999px";
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+
+      let successful = false;
+      try {
+        successful = document.execCommand("copy");
+      } catch (error) {
+        successful = false;
+      }
+
+      document.body.removeChild(textArea);
+      return successful;
+    }
+
+    async function handleCopy() {
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(address);
+          showToast("주소가 복사되었어요.");
+          return;
+        }
+
+        const copied = fallbackCopyText(address);
+        if (copied) {
+          showToast("주소가 복사되었어요.");
+        } else {
+          showToast("복사에 실패했어요. 주소를 길게 눌러 직접 복사해주세요.");
+        }
+      } catch (error) {
+        const copied = fallbackCopyText(address);
+        if (copied) {
+          showToast("주소가 복사되었어요.");
+        } else {
+          showToast("복사에 실패했어요. 주소를 길게 눌러 직접 복사해주세요.");
+        }
+      }
+    }
+  </script>
+</body>
+</html>
